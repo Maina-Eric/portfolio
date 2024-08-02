@@ -2,15 +2,18 @@ import { projects } from '@/data'
 import React from 'react'
 import { PinContainer } from './3d-pin'
 import { FaLocationArrow } from 'react-icons/fa6'
+import { LampContainer } from './lamp'
 
 const RecentProjects = () => {
   return (
-    <div className="py-20" id="projects">
-        <h1 className="heading">
-            A Small Selection of {' '}
-            <span className="text-purple">Recent Projects</span>
-        </h1>
-        <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
+    <div className="py-5" id="projects">
+        <LampContainer>
+            <h1 className="heading">
+                A Small Selection of {' '}
+                <span className="text-cyan-400">Recent Projects</span>
+            </h1>
+        </LampContainer>
+        <div className="flex flex-wrap items-center justify-center gap-x-24">
             {projects.map(({id, title,des,img,iconLists,link}) => (
                 <div key={id} className="sm:h-[41rem] lg:min-h-[32.5rem] h-[32rem] flex items-center justify-center sm:w-[570px] w-[80vw]">
                     <PinContainer title={link} href="#projects">
